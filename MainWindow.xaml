@@ -1,0 +1,569 @@
+<Window
+	x:Class="Beanfun.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Beanfun"
+	ResizeMode="CanMinimize"
+	SizeToContent="WidthAndHeight"
+	WindowStartupLocation="CenterScreen"
+	AllowsTransparency="True"
+	WindowStyle="None"
+	Background="{x:Null}"
+	MouseLeftButtonDown="a"
+	Activated="f"
+	Deactivated="f"
+	StateChanged="e">
+	<Grid>
+		<Border
+			Name="imagee"
+			BorderThickness="1"
+			BorderBrush="#FF7EA05A">
+			<Border.Background>
+				<LinearGradientBrush
+					EndPoint="0,1"
+					StartPoint="0,0">
+					<GradientStop
+						x:Name="bd_Wnd_BG"
+						Color="#E5B6DE8E"
+						Offset="1" />
+				</LinearGradientBrush>
+			</Border.Background>
+		</Border>
+		<StackPanel
+			Margin="1">
+			<UIElement.Effect>
+				<BlurEffect />
+			</UIElement.Effect>
+		</StackPanel>
+		<StackPanel>
+			<Grid
+				HorizontalAlignment="Right">
+				<DockPanel>
+					<Button
+						Name="imageg"
+						Style="{DynamicResource ButtonStyle}"
+						Width="25"
+						Height="25"
+						ToolTip="关于"
+						IsTabStop="False"
+						Click="e"
+						
+						IsKeyboardFocusedChanged="d" Visibility="Collapsed">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{x:Type Button}"
+									x:Key="ButtonStyle">
+									<Setter
+										Property="Foreground"
+										Value="{DynamicResource SystemColors.ControlTextBrushKey}" />
+									<Setter
+										Property="Padding"
+										Value="0" />
+									<Setter
+										Property="BorderThickness"
+										Value="0" />
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="BorderBrush"
+										Value="{x:Null}" />
+									<Setter
+										Property="HorizontalAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalAlignment"
+										Value="Center" />
+									<Setter
+										Property="HorizontalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type Button}">
+												<Border
+													Name="Bd"
+													BorderBrush="{TemplateBinding BorderBrush}"
+													BorderThickness="{TemplateBinding BorderThickness}"
+													Background="{TemplateBinding Background}"
+													Padding="{TemplateBinding Padding}"
+													SnapsToDevicePixels="True">
+													<ContentPresenter
+														ContentTemplate="{TemplateBinding ContentTemplate}"
+														Content="{TemplateBinding Content}"
+														ContentStringFormat="{TemplateBinding ContentStringFormat}"
+														HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+														SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+														VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF808080" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="UIElement.IsKeyboardFocused"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF000000" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="IsPressed"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF000000" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="IsEnabled"
+														Value="False">
+														<Setter
+															Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+															Property="Foreground" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Path
+							Name="imageh"
+							Stroke="#FF000000"
+							Fill="#FF000000"
+							Margin="0"
+							Width="9"
+							Height="12"
+							Stretch="Uniform"
+							Data="M764,280.9 C750,250.29999999999998 730.1,222.79999999999998 704.7,199.29999999999998 C653.1,151.4 584.6,125 512,125 C439.4,125 370.9,151.4 319.3,199.2 C293.90000000000003,222.79999999999998 274,250.2 260,280.9 C245.4,312.9 238,346.79999999999995 238,381.79999999999995 L238,408.79999999999995 C238,414.99999999999994 243,419.99999999999994 249.2,419.99999999999994 L303.2,419.99999999999994 C309.4,419.99999999999994 314.4,414.99999999999994 314.4,408.79999999999995 L314.4,381.79999999999995 C314.4,282.29999999999995 403,201.39999999999995 512,201.39999999999995 C621,201.39999999999995 709.6,282.29999999999995 709.6,381.79999999999995 C709.6,422.59999999999997 695.1,460.99999999999994 667.6,492.99999999999994 C640.4,524.6999999999999 602,547.4 559.5,557 C535.2,562.5 513.3,576.2 497.8,595.8 C482.40000000000003,615.1999999999999 473.90000000000003,639.5999999999999 473.90000000000003,664.4 L473.90000000000003,695.8 C473.90000000000003,702 478.90000000000003,707 485.1,707 L539.1,707 C545.3000000000001,707 550.3000000000001,702 550.3000000000001,695.8 L550.3000000000001,664.4 C550.3000000000001,648.6999999999999 561.2,634.9 576.3000000000001,631.5 C634.7,618.3 687.7,586.8 725.6000000000001,542.8 C744.7000000000002,520.5 759.6000000000001,495.69999999999993 769.9000000000001,468.79999999999995 C780.6000000000001,440.9 786.0000000000001,411.59999999999997 786.0000000000001,381.79999999999995 C786.0000000000001,346.79999999999995 778.6000000000001,312.79999999999995 764.0000000000001,280.9 M512,920 C481.1,920 456,945.1 456,976 C456,1006.9 481.1,1032 512,1032 C542.9,1032 568,1006.9 568,976 C568,945.1 542.9,920 512,920">
+							<UIElement.Effect>
+								<DropShadowEffect
+									Opacity="0.7"
+									BlurRadius="0"
+									ShadowDepth="0" />
+							</UIElement.Effect>
+						</Path>
+					</Button>
+					<Button
+						Name="imagei"
+						Style="{DynamicResource ButtonStyle}"
+						Width="25"
+						Height="25"
+						ToolTip="设定"
+						IsTabStop="False"
+						Click="d"
+						
+						IsKeyboardFocusedChanged="c">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{x:Type Button}"
+									x:Key="ButtonStyle">
+									<Setter
+										Property="Foreground"
+										Value="{DynamicResource SystemColors.ControlTextBrushKey}" />
+									<Setter
+										Property="Padding"
+										Value="0" />
+									<Setter
+										Property="BorderThickness"
+										Value="0" />
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="BorderBrush"
+										Value="{x:Null}" />
+									<Setter
+										Property="HorizontalAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalAlignment"
+										Value="Center" />
+									<Setter
+										Property="HorizontalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type Button}">
+												<Border
+													Name="Bd"
+													BorderBrush="{TemplateBinding BorderBrush}"
+													BorderThickness="{TemplateBinding BorderThickness}"
+													Background="{TemplateBinding Background}"
+													Padding="{TemplateBinding Padding}"
+													SnapsToDevicePixels="True">
+													<ContentPresenter
+														ContentTemplate="{TemplateBinding ContentTemplate}"
+														Content="{TemplateBinding Content}"
+														ContentStringFormat="{TemplateBinding ContentStringFormat}"
+														HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+														SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+														VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF808080" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="UIElement.IsKeyboardFocused"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF000000" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="IsPressed"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF000000" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="IsEnabled"
+														Value="False">
+														<Setter
+															Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+															Property="Foreground" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Path
+							Name="j"
+							Fill="#FF000000"
+							Margin="0"
+							Width="12"
+							Height="12"
+							Stretch="Uniform"
+							Data="M984,590.4 L984,425.6 L867.2,425.6 C859.2,390.40000000000003 848,358.40000000000003 830.4000000000001,328 L832.0000000000001,324.8 L908.8000000000001,233.60000000000002 L796.8000000000001,121.60000000000002 L705.6,196.8 C673.6,176 636.8000000000001,160 598.4,150.4 L598.4,46.4 L428.8,46.4 L428.8,150.4 C387.2,160 348.8,177.6 313.6,200 L236.8,129.6 L132.8,233.6 L204.8,312 C184,345.6 168,382.4 160,422.4 L52.8,422.4 L52.8,590.4 L161.6,590.4 L161.6,590.4 C171.2,630.4 188.79999999999998,667.1999999999999 211.2,700.8 L132.79999999999998,782.4 L244.79999999999998,892.8 L329.59999999999997,817.5999999999999 L336,816 C368,833.6 403.2,848 440,856 L440,856 L436.8,976 L596.8,976 L600,852.8 C638.4,843.1999999999999 675.2,827.1999999999999 707.2,806.4 L707.2,806.4 L796.8000000000001,892.8 L900.8000000000001,784 L816,697.6 C836.8,665.6 852.8,628.8000000000001 862.4,590.4 L984,590.4 M518.4,768 C376,768 260.79999999999995,652.8 260.79999999999995,510.4 C260.79999999999995,368 375.99999999999994,252.79999999999995 518.4,252.79999999999995 C660.8,252.79999999999995 776,367.99999999999994 776,510.4 C776,652.8 660.8,768 518.4,768">
+							<UIElement.Effect>
+								<DropShadowEffect
+									Opacity="0.7"
+									BlurRadius="0"
+									ShadowDepth="0" />
+							</UIElement.Effect>
+						</Path>
+					</Button>
+					<Button
+						Name="imagek"
+						Style="{DynamicResource ButtonStyle}"
+						Width="25"
+						Height="25"
+						ToolTip="最小化"
+						IsTabStop="False"
+						Click="c"
+						
+						IsKeyboardFocusedChanged="b">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{x:Type Button}"
+									x:Key="ButtonStyle">
+									<Setter
+										Property="Foreground"
+										Value="{DynamicResource SystemColors.ControlTextBrushKey}" />
+									<Setter
+										Property="Padding"
+										Value="0" />
+									<Setter
+										Property="BorderThickness"
+										Value="0" />
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="BorderBrush"
+										Value="{x:Null}" />
+									<Setter
+										Property="HorizontalAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalAlignment"
+										Value="Center" />
+									<Setter
+										Property="HorizontalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type Button}">
+												<Border
+													Name="Bd"
+													BorderBrush="{TemplateBinding BorderBrush}"
+													BorderThickness="{TemplateBinding BorderThickness}"
+													Background="{TemplateBinding Background}"
+													Padding="{TemplateBinding Padding}"
+													SnapsToDevicePixels="True">
+													<ContentPresenter
+														ContentTemplate="{TemplateBinding ContentTemplate}"
+														Content="{TemplateBinding Content}"
+														ContentStringFormat="{TemplateBinding ContentStringFormat}"
+														HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+														SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+														VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF808080" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="UIElement.IsKeyboardFocused"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF000000" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="IsPressed"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FF000000" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#3C000000" />
+													</Trigger>
+													<Trigger
+														Property="IsEnabled"
+														Value="False">
+														<Setter
+															Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+															Property="Foreground" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Path
+							Name="l"
+							Stroke="#FF000000"
+							Margin="0"
+							StrokeThickness="2">
+							<UIElement.Effect>
+								<DropShadowEffect
+									Opacity="0.7"
+									BlurRadius="0"
+									ShadowDepth="0" />
+							</UIElement.Effect>
+							<Path.Data>
+								<PathGeometry>
+									<PathFigure>
+										<PolyLineSegment
+											Points="9,0" />
+									</PathFigure>
+								</PathGeometry>
+							</Path.Data>
+						</Path>
+					</Button>
+					<Button
+						Name="imagem"
+						Style="{DynamicResource ButtonStyle}"
+						Width="25"
+						Height="25"
+						ToolTip="关闭"
+						IsTabStop="False"
+						Click="b"
+						
+						IsKeyboardFocusedChanged="a">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{x:Type Button}"
+									x:Key="ButtonStyle">
+									<Setter
+										Property="Foreground"
+										Value="{DynamicResource SystemColors.ControlTextBrushKey}" />
+									<Setter
+										Property="Padding"
+										Value="0" />
+									<Setter
+										Property="BorderThickness"
+										Value="0" />
+									<Setter
+										Property="Background"
+										Value="#00FFFFFF" />
+									<Setter
+										Property="BorderBrush"
+										Value="{x:Null}" />
+									<Setter
+										Property="HorizontalAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalAlignment"
+										Value="Center" />
+									<Setter
+										Property="HorizontalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="VerticalContentAlignment"
+										Value="Center" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type Button}">
+												<Border
+													Name="Bd"
+													BorderBrush="{TemplateBinding BorderBrush}"
+													BorderThickness="{TemplateBinding BorderThickness}"
+													Background="{TemplateBinding Background}"
+													Padding="{TemplateBinding Padding}"
+													SnapsToDevicePixels="True">
+													<ContentPresenter
+														ContentTemplate="{TemplateBinding ContentTemplate}"
+														Content="{TemplateBinding Content}"
+														ContentStringFormat="{TemplateBinding ContentStringFormat}"
+														HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+														SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+														VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+												</Border>
+												<ControlTemplate.Triggers>
+													<Trigger
+														Property="UIElement.IsMouseOver"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FFFFFFFF" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#FFd44027" />
+													</Trigger>
+													<Trigger
+														Property="UIElement.IsKeyboardFocused"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FFFFFFFF" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#FFd44027" />
+													</Trigger>
+													<Trigger
+														Property="IsPressed"
+														Value="True">
+														<Setter
+															Property="Foreground"
+															Value="#FFFFFFFF" />
+														<Setter
+															TargetName="Bd"
+															Property="Background"
+															Value="#FFd44027" />
+													</Trigger>
+													<Trigger
+														Property="IsEnabled"
+														Value="False">
+														<Setter
+															Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+															Property="Foreground" />
+													</Trigger>
+												</ControlTemplate.Triggers>
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Path
+							Name="imagen"
+							Stroke="#FF000000"
+							Margin="0"
+							StrokeThickness="2">
+							<UIElement.Effect>
+								<DropShadowEffect
+									Opacity="0.7"
+									BlurRadius="0"
+									ShadowDepth="0" />
+							</UIElement.Effect>
+							<Path.Data>
+								<PathGeometry>
+									<PathFigure>
+										<PolyLineSegment
+											Points="9,9" />
+									</PathFigure>
+									<PathFigure
+										StartPoint="0,9">
+										<PolyLineSegment
+											Points="9,0" />
+									</PathFigure>
+								</PathGeometry>
+							</Path.Data>
+						</Path>
+					</Button>
+				</DockPanel>
+			</Grid>
+			<Frame
+				Name="o"
+				IsHitTestVisible="True"
+				NavigationUIVisibility="Hidden"
+				Margin="1"
+				IsTabStop="False" />
+		</StackPanel>
+	</Grid>
+</Window>

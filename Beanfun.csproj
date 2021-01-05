@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F807F9EC-A586-4BEF-B873-223081824252}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Beanfun</RootNamespace>
+    <AssemblyName>Beanfun</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60DC8134-EBA5-43B8-BCC9-BB4BC16C2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Beanfun.ico</ApplicationIcon>
+    <StartupObject>Beanfun.App</StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="antlr.runtime">
+      <HintPath>.\antlr.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluorineFx">
+      <HintPath>.\FluorineFx.dll</HintPath>
+    </Reference>
+    <Reference Include="INIFileParser">
+      <HintPath>.\INIFileParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.BFService">
+      <HintPath>.\Interop.BFService.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.FSFISCATLLib">
+      <HintPath>.\Interop.FSFISCATLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.FSP11CRYPTATLLib">
+      <HintPath>.\Interop.FSP11CRYPTATLLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>.\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="a.cs" />
+    <Compile Include="About.cs" />
+    <Compile Include="AccountList.cs" />
+    <Compile Include="AccountManager.cs" />
+    <Compile Include="AccountRecords.cs" />
+    <Compile Include="AccRecovery.cs" />
+    <Compile Include="AddAccount.cs" />
+    <Compile Include="AddServiceAccount.cs" />
+    <Compile Include="Amemiya\Extensions\ArrayExtensions.cs" />
+    <Compile Include="APIUrl.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="b.cs" />
+    <Compile Include="BeanfunClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BFServiceX.cs" />
+    <Compile Include="c.cs" />
+    <Compile Include="ChangeServiceAccountDisplayName.cs" />
+    <Compile Include="Contract.cs" />
+    <Compile Include="CopyBox.cs" />
+    <Compile Include="d.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Donate.cs" />
+    <Compile Include="DotfuscatorAttribute.cs" />
+    <Compile Include="DownloadProgressBar.cs" />
+    <Compile Include="DWebBrowserEvents2.cs" />
+    <Compile Include="e.cs" />
+    <Compile Include="EquipCalculator.cs" />
+    <Compile Include="f.cs" />
+    <Compile Include="g.cs" />
+    <Compile Include="GameList.cs" />
+    <Compile Include="GameServerAccountListApp.cs" />
+    <Compile Include="h.cs" />
+    <Compile Include="i.cs" />
+    <Compile Include="id_pass_form.cs" />
+    <Compile Include="j.cs" />
+    <Compile Include="k.cs" />
+    <Compile Include="KartTools.cs" />
+    <Compile Include="l.cs" />
+    <Compile Include="LoginPage.cs" />
+    <Compile Include="LoginRegionSelection.cs" />
+    <Compile Include="LoginWait.cs" />
+    <Compile Include="m.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManagerAccount.cs" />
+    <Compile Include="MapleTools.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <DependentUpon>Settings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="qr_form.cs" />
+    <Compile Include="ReflectionService.cs" />
+    <Compile Include="Response.cs" />
+    <Compile Include="ServiceAccountInfo.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="SKIV.cs" />
+    <Compile Include="UnconnectedGame_AddAccount.cs" />
+    <Compile Include="UnconnectedGame_ChangePassword.cs" />
+    <Compile Include="VerifyPage.cs" />
+    <Compile Include="WebBrowser.cs" />
+    <Compile Include="WebBrowserExtendedNavigatingEventArgs.cs" />
+    <Compile Include="WebBrowserHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="antlr.runtime.dll" />
+    <EmbeddedResource Include="FluorineFx.dll" />
+    <EmbeddedResource Include="INIFileParser.dll" />
+    <EmbeddedResource Include="Interop.BFService.dll" />
+    <EmbeddedResource Include="Interop.FSFISCATLLib.dll" />
+    <EmbeddedResource Include="Interop.FSP11CRYPTATLLib.dll" />
+    <EmbeddedResource Include="log4net.dll" />
+    <EmbeddedResource Include="Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="Properties\Resources.resources" />
+    <EmbeddedResource Include="Resources\LoaderDll.dll" />
+    <EmbeddedResource Include="Resources\LocaleEmulator.dll" />
+    <EmbeddedResource Include="stdole.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\about.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\accountlist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\id-pass_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\loginpage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\loginwait.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\manageraccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\qr_form.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\verifypage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\accrecovery.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\addaccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\addserviceaccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\changeserviceaccountdisplayname.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\contract.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\copybox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\donate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\downloadprogressbar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\equipcalculator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\gamelist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\karttools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\loginregionselection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\mapletools.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\serviceaccountinfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\unconnectedgame_addaccount.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\unconnectedgame_changepassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="windows\webbrowser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\icon.ico" />
+    <Resource Include="resources\logo.png" />
+    <Resource Include="resources\qrcode_alipay.png" />
+    <Resource Include="resources\qrcode_qqpay.png" />
+    <Resource Include="resources\qrcode_wechat.png" />
+    <Resource Include="resources\refresh.png" />
+    <Resource Include="resources\scroll_black.png" />
+    <Resource Include="resources\scroll_bm.png" />
+    <Resource Include="resources\scroll_jd.png" />
+    <Resource Include="resources\scroll_other.png" />
+    <Resource Include="resources\scroll_red.png" />
+    <Resource Include="resources\scroll_sm.png" />
+    <Resource Include="resources\scroll_v.png" />
+    <Resource Include="resources\scroll_x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
